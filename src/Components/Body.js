@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 
 const Body = (props) => {
   return (
-    <div>
+    <div class="row">
       {props.items.map((item, index) => (
         <React.Fragment key={uuidv4()}>
           <Item item={item} index={index} />

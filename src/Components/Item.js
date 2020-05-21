@@ -2,10 +2,10 @@ import React from "react";
 
 function Item(props) {
   return (
-    <div class="col s6 m3">
-      <div class="card blue-grey darken-1">
-        <div class="card-content white-text">
-          <span class="card-title">{props.item.name}</span>
+    <div className="col s6 m3">
+      <div className="card blue-grey darken-1">
+        <div className="card-content white-text">
+          <span className="card-title">{props.item.name}</span>
           <img
             width="75"
             height="75"
@@ -14,8 +14,13 @@ function Item(props) {
           />
           <p>{props.item.price}</p>
         </div>
-        <div class="card-action">
-          <i class="small material-icons">add_shopping_cart</i>
+        <div className="card-action">
+          <i
+            onClick={(e) => props.addItemToCart(e, props.item)}
+            className="small material-icons"
+          >
+            add_shopping_cart
+          </i>
         </div>
       </div>
     </div>

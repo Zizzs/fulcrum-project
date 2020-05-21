@@ -60,11 +60,20 @@ class App extends Component {
       cart: [],
     };
   }
+
+  addItemToCart = (e, item) => {
+    e.preventDefault();
+    let currentCart = this.state.cart;
+    currentCart.push(item);
+    this.setState({ cart: currentCart });
+    console.log(this.state.cart);
+  };
+
   render() {
     return (
       <div>
         <Header />
-        <Body items={this.state.items} />
+        <Body addItemToCart={this.addItemToCart} items={this.state.items} />
       </div>
     );
   }

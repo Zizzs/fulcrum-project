@@ -4,10 +4,10 @@ import { v4 as uuidv4 } from "uuid";
 
 const Body = (props) => {
   return (
-    <div class="row">
+    <div className="row">
       {props.items.map((item, index) => (
         <React.Fragment key={uuidv4()}>
-          <Item item={item} index={index} />
+          <Item addItemToCart={props.addItemToCart} item={item} index={index} />
         </React.Fragment>
       ))}
     </div>

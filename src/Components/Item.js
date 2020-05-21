@@ -1,21 +1,35 @@
 import React from "react";
+import "../App.css";
+import { AutoInit } from "materialize-css";
 
 function Item(props) {
   return (
-    <div className="col s6 m3">
-      <div className="card blue-grey darken-1">
-        <div className="card-content white-text">
-          <span className="card-title">{props.item.name}</span>
+    <div className="col s12 m3 text-center">
+      <div className="card">
+        <div className="card-image">
           <img
-            width="75"
-            height="75"
+            style={{
+              height: 125,
+              width: 125,
+              marginLeft: "auto",
+              marginRight: "auto",
+            }}
             src={props.item.image}
             alt={props.item.name}
           />
-          <p>{props.item.price}</p>
+        </div>
+        <div className="card-content">
+          <span
+            style={{ fontWeight: "bold", fontSize: 20 }}
+            className="card-title"
+          >
+            {props.item.name}
+          </span>
+          <p>${props.item.price}</p>
         </div>
         <div className="card-action">
           <i
+            style={{ cursor: "pointer" }}
             onClick={(e) => props.addItemToCart(e, props.item)}
             className="small material-icons"
           >

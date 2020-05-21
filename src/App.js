@@ -10,7 +10,7 @@ class App extends Component {
       items: [
         {
           name: "Book",
-          price: 12.49,
+          price: "12.49",
           taxed: false,
           import: false,
           image:
@@ -18,7 +18,7 @@ class App extends Component {
         },
         {
           name: "Music CD",
-          price: 14.99,
+          price: "14.99",
           taxed: true,
           import: false,
           image:
@@ -26,7 +26,7 @@ class App extends Component {
         },
         {
           name: "Chocolate Bar",
-          price: 0.85,
+          price: "0.85",
           taxed: false,
           import: false,
           image:
@@ -34,7 +34,7 @@ class App extends Component {
         },
         {
           name: "Packet of Headache Pills",
-          price: 9.75,
+          price: "9.75",
           taxed: false,
           import: false,
           image:
@@ -42,7 +42,7 @@ class App extends Component {
         },
         {
           name: "Imported Box of Chocolates",
-          price: 10.0,
+          price: "10.00",
           taxed: true,
           import: true,
           image:
@@ -50,7 +50,7 @@ class App extends Component {
         },
         {
           name: "Imported Bottle of Perfume",
-          price: 47.5,
+          price: "47.50",
           taxed: true,
           import: true,
           image:
@@ -66,13 +66,13 @@ class App extends Component {
     let currentCart = this.state.cart;
     currentCart.push(item);
     this.setState({ cart: currentCart });
-    console.log(this.state.cart);
+    //console.log(this.state.cart);
   };
 
   render() {
     return (
       <div>
-        <Header />
+        <Header cart={this.state.cart} />
         <Body addItemToCart={this.addItemToCart} items={this.state.items} />
       </div>
     );

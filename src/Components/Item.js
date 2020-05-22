@@ -20,7 +20,7 @@ function Item(props) {
         </div>
         <div className="card-content">
           <span
-            style={{ fontWeight: "bold", fontSize: 20 }}
+            style={{ fontWeight: "bold", fontSize: 18 }}
             className="card-title"
           >
             {props.item.name}

@@ -5,3 +5,20 @@
 .card-header-text-size {
   font-size: 15px;
 }
+
+#cartDropdown {
+  position: static;
+  z-index: 1;
+  right: 100%;
+}
+
+#bodyDiv {
+  position: absolute;
+  z-index: -1;
+}
+
+#cartDiv {
+  width: 250px;
+  height: 600px;
+  color: black;
+}

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Header from "./Components/Header";
 import Body from "./Components/Body";
-import { v4 as uuidv4 } from "uuid";
 import "./App.css";
 
 class App extends Component {
@@ -47,7 +46,7 @@ class App extends Component {
           taxed: false,
           import: true,
           image:
-            "https://images.freeimages.com/images/large-previews/b39/chocolates-1186984.jpg",
+            "https://i.pinimg.com/originals/6d/84/cd/6d84cdde10b127b55eff41be54cdbe83.jpg",
         },
         {
           name: "Imported Box of Chocolates",
@@ -55,7 +54,7 @@ class App extends Component {
           taxed: false,
           import: true,
           image:
-            "https://images.freeimages.com/images/large-previews/b39/chocolates-1186984.jpg",
+            "https://images.media-allrecipes.com/userphotos/560x315/4444508.jpg",
         },
         {
           name: "Bottle of Perfume",
@@ -71,7 +70,7 @@ class App extends Component {
           taxed: true,
           import: true,
           image:
-            "https://images.freeimages.com/images/large-previews/6d0/perfume-1560440.jpg",
+            "https://i.pinimg.com/originals/76/06/5d/76065da6493456c4770b17997db57f1a.jpg",
         },
         {
           name: "Imported Bottle of Perfume",
@@ -79,7 +78,7 @@ class App extends Component {
           taxed: true,
           import: true,
           image:
-            "https://images.freeimages.com/images/large-previews/6d0/perfume-1560440.jpg",
+            "https://images-na.ssl-images-amazon.com/images/I/51NZWncCZBL._AC_UY580_.jpg",
         },
       ],
       cart: [],

@@ -16,7 +16,7 @@ class Cart extends Component {
     let itemsWithTax = [];
 
     // If the user adds a new item, the itemsToBeTaxed array will retrieve the cart's items
-    if (this.props.cart.length != this.state.taxedItems.length) {
+    if (this.props.cart.length !== this.state.taxedItems.length) {
       itemsToBeTaxed = this.props.cart;
     }
 
@@ -90,19 +90,31 @@ class Cart extends Component {
   render() {
     return (
       <div id="cartDiv">
-        {this.state.taxedItems.map((item, index) => (
-          <div className="cartItem" key={uuidv4()}>
-            <div>
-              <img className="cartItemImage" src={item.image}></img>
+        <div id="cartItems">
+          {this.state.taxedItems.map((item, index) => (
+            <div className="cartItem" key={uuidv4()}>
+              <div>
+                <img
+                  className="cartItemImage"
+                  src={item.image}
+                  alt={item.name}
+                ></img>
+              </div>
+              <div className="cartItemInfo">
+                <span className="cartItemName">{item.name}</span>
+                <span className="cartItemPrice">${item.price}</span>
+              </div>
             </div>
-            <div>
-              <span className="cartItemName">{item.name}</span>
-              <span className="cartItemPrice">{item.price}</span>
-            </div>
+          ))}
+        </div>
+        <div>
+          <div id="salesTaxText">
+            Sales Tax: ${this.state.totalSalesTax.toFixed(2)}
           </div>
-        ))}
-        <div>Sales Tax: {this.state.totalSalesTax.toFixed(2)}</div>
-        <div>Total Cost: {this.state.totalCartCost.toFixed(2)}</div>
+          <div id="totalCostText">
+            Total Cost: ${this.state.totalCartCost.toFixed(2)}
+          </div>
+        </div>
       </div>
     );
   }

@@ -10,9 +10,12 @@ class Header extends Component {
       alignment: "right",
       inDuration: 500,
       outDuration: 225,
+      coverTrigger: false,
+      closeOnClick: false,
     };
     M.Dropdown.init(element, options);
   }
+
   render() {
     return (
       <div>
@@ -22,13 +25,13 @@ class Header extends Component {
               Shopping Website
             </p>
             <ul id="nav-mobile" className="right">
-              <li>
-                <a className="dropdown-trigger" data-target="cartDropdown">
+              <li id="cartImage">
+                <i className="dropdown-trigger" data-target="cartDropdown">
                   <i style={{ marginLeft: 25 }} className="right">
                     {this.props.cart.length}
                   </i>
                   <i className="material-icons">shopping_cart</i>
-                </a>
+                </i>
               </li>
             </ul>
           </div>

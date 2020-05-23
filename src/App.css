@@ -14,6 +14,7 @@
 
 #headerLogo {
   margin-top: 0px;
+  margin-left: 15px;
 }
 
 #bodyDiv {
@@ -22,10 +23,31 @@
 }
 
 #cartDiv {
+  display: grid;
+  grid-template-rows: 5fr 1fr;
   width: 350px;
   height: 600px;
   color: black;
   padding: 15px;
+}
+
+#cartImage {
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+#cartImage:hover {
+  border-radius: 15px;
+  background-color: #26c6da;
+}
+
+.cartItems {
+  overflow-y: scroll;
+}
+
+.cartItemInfo {
+  display: grid;
+  grid-template-columns: 7fr 1fr;
 }
 
 .cartItem {
@@ -38,9 +60,34 @@
 }
 
 .cartItemName {
+  font-size: 13px;
   float: left;
 }
 
 .cartItemPrice {
   float: right;
+}
+
+.cartItemRemove {
+  margin-left: 5px;
+  margin-top: 20px;
+  float: right;
+}
+
+.buyButton:hover {
+  border-radius: 2px;
+  background-color: #d9d9d9;
+}
+
+.buyButton:active {
+  background-color: #a6a6a6;
+}
+
+#salesTaxText {
+  font-weight: bold;
+}
+
+#totalCostText {
+  font-weight: bold;
+  font-size: 22px;
 }

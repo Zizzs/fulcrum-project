@@ -1,6 +1,5 @@
 import React from "react";
 import "../App.css";
-import { AutoInit } from "materialize-css";
 
 function Item(props) {
   return (
@@ -31,7 +30,7 @@ function Item(props) {
           <i
             style={{ cursor: "pointer" }}
             onClick={(e) => props.addItemToCart(e, props.item)}
-            className="small material-icons"
+            className="small material-icons buyButton"
           >
             add_shopping_cart
           </i>

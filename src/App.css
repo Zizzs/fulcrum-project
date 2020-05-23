@@ -12,13 +12,35 @@
   right: 100%;
 }
 
+#headerLogo {
+  margin-top: 0px;
+}
+
 #bodyDiv {
   position: absolute;
   z-index: -1;
 }
 
 #cartDiv {
-  width: 250px;
+  width: 350px;
   height: 600px;
   color: black;
+  padding: 15px;
+}
+
+.cartItem {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.cartItemImage {
+  width: 75%;
+}
+
+.cartItemName {
+  float: left;
+}
+
+.cartItemPrice {
+  float: right;
 }

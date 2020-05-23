@@ -18,14 +18,12 @@ class Header extends Component {
       <div>
         <nav>
           <div className="nav-wrapper cyan lighten-2">
-            <a className="brand-logo">Shopping Website</a>
+            <p id="headerLogo" className="brand-logo">
+              Shopping Website
+            </p>
             <ul id="nav-mobile" className="right">
               <li>
-                <a
-                  className="dropdown-trigger"
-                  data-target="cartDropdown"
-                  href="#"
-                >
+                <a className="dropdown-trigger" data-target="cartDropdown">
                   <i style={{ marginLeft: 25 }} className="right">
                     {this.props.cart.length}
                   </i>

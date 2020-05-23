@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Header from "./Components/Header";
 import Body from "./Components/Body";
+import { v4 as uuidv4 } from "uuid";
 import "./App.css";
 
 class App extends Component {
@@ -43,14 +44,38 @@ class App extends Component {
         {
           name: "Imported Box of Chocolates",
           price: "10.00",
-          taxed: true,
+          taxed: false,
           import: true,
           image:
             "https://images.freeimages.com/images/large-previews/b39/chocolates-1186984.jpg",
         },
         {
+          name: "Imported Box of Chocolates",
+          price: "11.25",
+          taxed: false,
+          import: true,
+          image:
+            "https://images.freeimages.com/images/large-previews/b39/chocolates-1186984.jpg",
+        },
+        {
+          name: "Bottle of Perfume",
+          price: "18.99",
+          taxed: true,
+          import: false,
+          image:
+            "https://images.freeimages.com/images/large-previews/6d0/perfume-1560440.jpg",
+        },
+        {
           name: "Imported Bottle of Perfume",
           price: "47.50",
+          taxed: true,
+          import: true,
+          image:
+            "https://images.freeimages.com/images/large-previews/6d0/perfume-1560440.jpg",
+        },
+        {
+          name: "Imported Bottle of Perfume",
+          price: "27.99",
           taxed: true,
           import: true,
           image:
